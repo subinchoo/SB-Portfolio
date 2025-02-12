@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #53755d;
+  color: white;
+  padding: 20px;
+}
+
+/* 내비게이션 스타일 */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 기본 섹션 스타일 */
+section {
+  padding: 50px;
+  background: white;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px; /* 최대 너비 설정 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px #53755d;
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #53755d;
+  color: white;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* About 섹션 */
+#about {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* 언어 리스트 스타일 */
+#language-list {
+  display: flex;
+  flex-wrap: wrap; /* 반응형: 작은 화면에서는 줄바꿈 */
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.language {
+  display: none;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+
+/* 프로젝트 섹션 */
+.project-container {
+  display: flex;
+  flex-wrap: wrap; /* 반응형: 작은 화면에서는 줄바꿈 */
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  width: calc(33.333% - 20px); /* 3개씩 배치 (마진 포함) */
+  max-width: 350px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+  background-color: #f694c5;
+}
+
+/* 스킬 박스 */
+.skills-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* 리스트 스타일 */
+.language-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 공통 링크 스타일 */
+.no-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+.no-style:hover {
+  color: #ff69b4;
+}
+
+/* ✅ page-style, edge-page-style, logo-style 원래대로 유지 */
+.page-style {
+  width: 100px;
+  height: 180px;
+  vertical-align: middle;
+  margin-right: 20px;
+  border: 2px;
+  border-color: black;
+  border-radius: 7px;
+}
+
+.page-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-bottom: -100px;
+}
+
+.icon-style {
+  width: 150px;
+  height: 150px;
+}
+
+.edge-page-style {
+  width: 80%;
+  height: 70%;
+  vertical-align: middle;
+  margin-right: 20px;
+  margin-bottom: 80px;
+  border: 2px;
+  border-color: black;
+  border-radius: 7px;
+}
+
+.logo-style {
+  width: 100px;
+  height: 160px;
+  vertical-align: middle;
+  margin-top: 100px;
+  border: 2px;
+  border-color: black;
+  border-radius: 7px;
+}
+
+/* 📌 반응형 미디어 쿼리 */
+@media (max-width: 1024px) {
+  section {
+    width: 90%;
+  }
+
+  .project {
+    width: calc(50% - 20px); /* 2개씩 배치 */
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .project {
+    width: 80%; /* 한 줄에 하나 */
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .project {
+    width: 100%; /* 가득 차게 */
+  }
+}
