@@ -39,9 +39,9 @@
       <h3>Soft Skills</h3>
       <div class="skills-box">
         <ul id="soft-skills" class="language-list">
-          <li class="language">Collaboration</li>
-          <li class="language">Leadership</li>
-          <li class="language">Problem-Solving</li>
+          <li class="soft-skill">Collaboration</li>
+          <li class="soft-skill">Leadership</li>
+          <li class="soft-skill">Problem-Solving</li>
         </ul>
       </div>
     </section>
@@ -106,31 +106,34 @@
     </footer>
 
     <script>
-      const languages = document.querySelectorAll(".language");
-      let index = 0;
 
-      function showLanguage() {
-        if (index < languages.length) {
-          // Reset color of all languages to black
-          languages.forEach((lang) => {
-            lang.style.display = "none"; // Hide all languages
-            lang.style.color = "black"; // Reset color to black
-          });
+      function showListItem(class_name, index) {
+        const items = document.querySelectorAll(class_name);
 
-          // Show the current language
-          languages[index].style.display = "list-item"; // Show the language
-          languages[index].style.color = "#FF69B4"; // Change color to brown
-
-          index++;
-          if (index >= languages.length) {
-            index = 0; // Reset index to loop back to the first language
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i]
+          if (i === index) {
+            // Show the current list item
+            item.style.display = "list-item";
+            item.style.color = "#FF69B4";
+          } else {
+            // Reset color of item to black and hide it
+            item.style.display = "none";
+            item.style.color = "black";
           }
-          setTimeout(showLanguage, 1000); // Show the next language after 1 second
         }
+
+        index = (index + 1) % items.length;
+
+        // Show the next item after 1 second
+        setTimeout(() => showListItem(class_name, index), 1000);
       }
 
-      // Start showing languages when the page loads
-      window.onload = showLanguage;
+      // Start showing lists when the page loads
+      window.onload = () => {
+          showListItem(".language", 0);
+          showListItem(".soft-skill", 0);
+      }
     </script>
   </body>
 </html>
