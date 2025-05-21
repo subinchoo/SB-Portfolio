@@ -73,6 +73,14 @@ footer {
   transition: color 0.5s;
 }
 
+.soft-skill {
+  display: none;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+
 /* 프로젝트 섹션 */
 .project-container {
   display: flex;
